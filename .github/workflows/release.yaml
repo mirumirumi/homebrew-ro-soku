@@ -11,10 +11,6 @@ on:
         type: string
         required: true
         description: sha256 for x86_64 binary
-      sha256_mac_aarch64:
-        type: string
-        required: true
-        description: sha256 for aarch64 binary
 
 jobs:
   release:
@@ -30,7 +26,6 @@ jobs:
         run: |
           sed -i -E -z "s@[0-9]\.[0-9]\.[0-9]@${{ inputs.version }}@g" ./ro-soku.rb
           sed -i -E -z "s@ro-soku_x86_64_mac\"\\n[[:space:]]+sha256 \"[a-f0-9]{64}@ro-soku_x86_64_mac\"\\n      sha256 \"${{ inputs.sha256_mac_x86 }}@g" ./ro-soku.rb
-          sed -i -E -z "s@ro-soku_aarch64_mac\"\\n[[:space:]]+sha256 \"[a-f0-9]{64}@ro-soku_aarch64_mac\"\\n      sha256 \"${{ inputs.sha256_mac_aarch64 }}@g" ./ro-soku.rb
 
       - name: Commit & Push changes
         uses: actions-js/push@master
