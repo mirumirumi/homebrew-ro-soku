@@ -2,7 +2,7 @@ class RoSoku < Formula
   desc "Retrieve OHLCV ro-soku (means a candle in Japanese) from any exchange🕯️"
   homepage "https://github.com/mirumirumi/ro-soku"
   url "https://github.com/mirumirumi/ro-soku/releases/download/0.1.1/ro-soku_x86_64_mac"
-  sha256 "b82e71e5e85763b64b5921893fd05f8153f3868b9c8f5d40e2e4bcdba71b2e1d"
+  sha256 "9c6018a60391bc57d00520734ce277f30456dc36d7c8eb39e7312548bc0a8777"
   version "0.1.1"
   license "MIT"
 
